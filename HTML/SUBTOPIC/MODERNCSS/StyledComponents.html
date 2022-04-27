@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="1800">
+    <title>Styled Components</title>
+    <link rel="icon" href="../../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/externalDesign.css">
+    <div class="sidenav">
+        <a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Modern CSS</h1></a>
+        <div class="sub-heading">&nbsp;
+        </div>
+        <div class="divider"></div>
+        <a href="#" class="newColor">Styled Components</a>
+        <a href="CSSModule.html">What is CSS Modules?</a>
+        <div class="divider"></div>
+    </div>
+    <div class="main">
+        <div class="content-list">
+            <div class="post-title-section"><h1>Styled Components</h1></div>
+            <div class="w-richtext">
+               <h4>Getting Started: Installation</h4>
+               <p>To download styled-components run:</p>
+               <img src="../../../PICTURES/IMAGES/MODERNCSS/pic_styledcomponents.JPG" alt="code">
+               <p>That's all you need to do, you are now ready to use it in your app! </p>
+               <img src="../../../PICTURES/IMAGES/MODERNCSS/pic2_styledcomponents.JPG" alt="note">
+
+               <h4>Your first styled component</h4>
+               <p>Let's say you want to create a simple and reusable &lt;button/&gt component that you can use throughout your application. There should be a normal version and a big and primary version for the important buttons. This is what it should look like when rendered: (this is a live example, click on them!)</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic3_styledcomponents.JPG" alt="button">
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic4_styledcomponents.JPG" alt="button">
+                <p>First, let's import styled-components and create a styled.button:</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic5_styledcomponents.JPG" alt="code">
+
+                <p>This Button variable here is now a React component that you can use like any other React component! This unusual backtick syntax is a new JavaScript feature called a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates">tagged template literal</a>.
+                    <br><br> You know how you can call functions with parenthesis? (myFunc()) Well, now you can also call functions with backticks! <a href="https://styled-components.com/docs/advanced#tagged-template-literals">(learn more about tagged template literals)</a>
+                    <br><br> If you render our lovely component now (just like any other component: &lt;button/&gt; this is what you get:</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic6_styledcomponents.JPG" alt="code">
+                <p>It renders a button! That's not a very nice button though we can do better than this, let's give it a bit of styling and tickle out the hidden beauty within!</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic7_styledcomponents.JPG" alt="code">
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic8_styledcomponents.JPG" alt="code">
+                <p>As you can see, styled-components lets you write actual CSS in your JavaScript. This means you can use all the features of CSS you use and love, including (but by far not limited to) media queries, all pseudo-selectors, nesting, etc.<br><br> The last step is that we need to define what a primary button looks like. To do that we also import { css } from styled-components and interpolate a function into our template literal, which gets passed the props of our component:</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic9_styledcomponents.JPG" alt="code">
+                <p>Here we're saying that when the primary property is set we want to add some more css to our component, in this case change the background and color.<br><br> That's all, we're done! Take a look at our finished component:</p>
+                <img src="../../../PICTURES/IMAGES/MODERNCSS/pic10_styledcomponents.JPG" alt="code">
+                
+                <div class="button-wrapper">
+                    <a href="../../MAINTOPIC/ModernCSS.html" class="button">←&nbsp;Go back</a>
+                    <a href="../../../index.html#landing-content" class="button">View all content</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

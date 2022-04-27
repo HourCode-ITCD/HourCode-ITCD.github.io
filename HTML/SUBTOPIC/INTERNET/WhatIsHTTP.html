@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="1800">
+    <title>Hypertext Transfer Protocol</title>
+    <link rel="icon" href="../../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/externalDesign.css">
+    <div class="sidenav">
+        <a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Internet</h1></a>
+        <div class="sub-heading">&nbsp;</div>
+        <div class="divider"></div>
+        <a href="BackgroundOfInternet.html#bgofInternet">Background of the Internet</a>
+        <a href="#http" class="newColor">What is HTTP?</a>
+        <a href="WhatIsDomainName.html#domainname">What is Domain Name?</a>
+        <a href="Hosting.html#hosting">What is Hosting?</a>
+        <a href="HowDoesBrowsersWork#browsers">How do browsers work?</a>
+        <div class="divider"></div>
+    </div>
+    <div class="main">
+        <div class="content-list">
+            <div class="post-title-section"><h1>What is HTTP?</h1></div>
+            <div class="w-richtext">
+                <h2>Hypertext Transfer Protocol</h2>
+                <p>The Hypertext Transfer Protocol (HTTP) is the foundation of the World Wide Web, and is used to load web pages using hypertext links. HTTP is an application layer protocol designed to transfer information between networked devices and runs on top of other layers of the network protocol stack. A typical flow over HTTP involves a client machine making a request to a server, which then sends a response message.</p>
+                <h2>What is an HTTP request?</h2>
+                <p>An HTTP request is the way internet communications platforms such as web browsers ask for the information they need to load a website.</p>
+    
+                <p>Each HTTP request made across the Internet carries with it a series of encoded data that carries different types of information. A typical HTTP request contains:</p>
+                <ol type="1">
+                    <li>HTTP Version Type</li>
+                    <li>a URL</li>
+                    <li>an HTTP method</li>
+                    <li>HTTP request headers</li>
+                    <li>Optional</li>
+                </ol>
+    
+                <h3>What is an HTTP Method</h3>
+                <p>An HTTP method, sometimes referred to as an HTTP verb, indicates the action that the HTTP request expects from the queried server. For example, two of the most common HTTP methods are 'GET' and 'POST'; a 'GET' request expects information back in return (usually in the form of a website), while a 'POST' request typically indicates that the client is submitting information to the web server (such as form information, e.g. a submitted username and password).</p>
+    
+                <h3>What is an HTTP request body?</h3>
+                <p>The body of a request is the part that contains the 'body' of information the request is transferring. The body of an HTTP request contains any information being submitted to the web server, such as a username and password, or any other data entered into a form.</p>
+    
+                <h2>What is an HTTP response?</h2>
+                <p>An HTTP response is what web clients (often browsers) receive from an Internet server in answer to an HTTP request. These responses communicate valuable information based on what was asked for in the HTTP request.</p>
+                <p>A typical HTTP response contains:</p>
+                <ol type="1">
+                    <li>an HTTP status code</li>
+                    <li>HTTP response headers</li>
+                    <li>optional HTTP body</li>
+                </ol>
+    
+                <h3>What is an HTTP status code?</h3>
+                <p>HTTP status codes are 3-digit codes most often used to indicate whether an HTTP request has been successfully completed. Status codes are broken into the following 5 blocks:</p>
+                <ol type="1">
+                    <li>1xx Informational</li>
+                    <li>2xx success</li>
+                    <li>3xx Redirection</li>
+                    <li>4xx Client Error</li>
+                    <li>5xx Server Error</li>
+                </ol>
+                <p>The “xx” refers to different numbers between 00 and 99.</p>
+                <p>Status codes starting with the number '2' indicate a success. For example, after a client requests a web page, the most commonly seen responses have a status code of '200 OK', indicating that the request was properly completed.</p>
+                <p>If the response starts with a '4' or a '5' that means there was an error and the webpage will not be displayed. A status code that begins with a '4' indicates a client-side error (It's very common to encounter a '404 NOT FOUND' status code when making a typo in a URL). A status code beginning in '5' means something went wrong on the server side. Status codes can also begin with a '1' or a '3', which indicate an informational response and a redirect, respectively.</p>
+    
+                <h3>What are response headers?</h3>
+                <p>Much like an HTTP request, an HTTP response comes with headers that convey important information such as the language and format of the data being sent in the response body.</p>
+    
+                <h3>What is an HTTP response body?</h3>
+                <p>Successful HTTP responses to 'GET' requests generally have a body which contains the requested information. In most web requests, this is HTML data which a web browser will translate into a web page.</p>
+            </div>
+            <div class="button-wrapper">
+                <a href="../../MAINTOPIC/Internet.html" class="button">←&nbsp;Go back</a>
+                <a href="../../../index.html#landing-content" class="button">View all content</a>
+            </div>
+            <br><br>
+            <hr>
+            <h3>For more information:</h3>
+            <ul>
+                <li><a href="https://www.cloudflare.com/en-gb/learning/ddos/glossary/hypertext-transfer-protocol-http/" target="_blank">What is HTTP?</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank">An overview of HTTP</a></li>
+                <li><a href="https://kamranahmed.info/blog/2016/08/13/http-in-depth/" target="_blank">Journey to HTTP/2</a></li>
+                <li><a href="https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1/" target="_blank">HTTP/3 From A To Z: Core Concepts</a></li>
+                <li><a href="https://www.youtube.com/watch?v=iYM2zFP3Zn0" target="_blank">HTTP Crash Course & Exploration</a></li>
+            </ul>
+        </div>  
+    </div>
+</body>
+</html>
