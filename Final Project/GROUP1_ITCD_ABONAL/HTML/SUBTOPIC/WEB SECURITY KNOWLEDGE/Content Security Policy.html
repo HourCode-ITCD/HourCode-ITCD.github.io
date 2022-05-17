@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Content Security Policy</title>
+    <meta http-equiv="refresh" content="1800">
+    <link rel="icon" href="../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    iframe{
+        float: left;
+        margin:5px 40px 10px 0;
+    }
+</style>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/Design.css" type="text/css"/>
+    <div class="sidebar-column">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar w-nav">
+            <div class="w-container"><a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Web Security Knowledge</h1></a>
+            <nav role="navigation" class="navigation-menu w-nav-menu">
+            <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+            <a href="#" class="nav-link w-nav-link newColor" style="max-width: 940px;">Content Security Policy</a>
+            <a href="CORS.html" class="nav-link w-nav-link" style="max-width: 940px;">CORS</a>
+            <a href="HTTPS.html" class="nav-link w-nav-link" style="max-width: 940px;">HTTPS</a>
+            <a href="OWASP Security Risk.html" class="nav-link w-nav-link" style="max-width: 940px;">OWASP Security Risk</a>
+            <div class="divider"></div>
+            <a href="../../../../INDEX.HTML#landing-content" class="nav-link w-nav-link" style="max-width: 940px;">Home</a>
+            </nav><div class="menu-button w-nav-button" style="user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <div class="post-title-section"><h1>Content Security Policy</h1></div>
+            <div class="w-richtext">
+
+                <iframe height="250px" width="400px" src="https://www.youtube.com/embed/1-sx4AmjGCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p>Content Security Policy is a computer security standard designed to prevent cross-site scripting, clickjacking, and other code injection threats caused by malicious content being executed in the context of a trusted web page. It is an additional layer of security that aids in the detection and mitigation of certain types of threats, such as Cross-Site Scripting (XSS) and data injection attacks. Data theft, site defacement, and virus propagation are all examples of these assaults.</p>
+                
+                <p>Except for CSP version 2, which has some expressly stated flaws in backward compatibility, CSP is supposed to be totally backward compatible. Browsers that don't support it can still communicate with servers that do, and vice versa: browsers that don't support CSP disregard it and continue to operate normally, using the conventional same-origin policy for web content. Browsers apply the conventional same-origin policy if the site does not supply the CSP header.</p>
+
+                <h2>Content Security Protocol Setup</h2>
+                <p>Developers must setup their web server to return the Content-Security-Policy HTTP header to enable CSP. The X-Content-Security-Policy header is sometimes mentioned, although it's an earlier version that no longer has to be specified.</p>
+
+                <p>A policy may also be configured using the <code>&lt;meta&gt;</code> element, for example:</p>
+                <img src="../../../PICTURES/IMAGES/WEB SECURITY KNOWLEDGE/csp alternate config.PNG" alt="CSP meta code alternative">
+
+                <h2>Mitigating cross-site scripting</h2>
+                <p>CSP's main purpose is to prevent and report XSS attacks. XSS attacks take advantage of the browser's faith in the server's content. Because the browser trusts the source of the material, even though it isn't coming from where it appears to be coming from, malicious scripts are performed by the victim's browser.</p>
+
+                <h2>Mitigating packet sniffing attacks</h2>
+                <p>In addition to limiting the domains from which material may be loaded, the server can also define which protocols are permitted, such as requiring all content to be loaded over HTTPS. A comprehensive data transmission security plan comprises not only requiring HTTPS for data transfer, but also adding the secure attribute to all cookies and enabling automated redirection from HTTP to HTTPS URLs. Sites can also use the Strict-Transport-Security HTTP header to force browsers to connect to them through an encrypted channel.</p>
+
+                <h2>Using Content Security Policy</h2>
+                <p>Adding the Content-Security-Policy HTTP header to a web page and setting values for it allows you to restrict what resources the user agent is authorized to load for that page. A page that uploads and shows photographs, for example, may accept images from everywhere but limit form actions to a certain endpoint. A well-crafted Content Security Policy can help defend a page against cross-site scripting attacks. This article describes how to correctly build such headers and gives examples.</p>
+
+                <p>Developers can use the Content-Security-Policy HTTP header to specify your policy, like this:</p>
+                
+                <img src="../../../PICTURES/IMAGES/WEB SECURITY KNOWLEDGE/specify csp policy.PNG" alt="code for specifying policies">
+
+                <p>The policy is a string that contains your Content Security Policy's policy instructions.</p>
+
+                <h2>Writing Policy</h2>
+                <p>Each policy directive outlines the policy for a certain resource type or policy area. A default-src policy directive should be included in your policy as a backup for other resource types that don't have their own rules (for a complete list, see the description of the default-src directive). To prohibit inline scripts from executing, a policy must include a default-src or script-src directive, as well as the usage of eval (). To prevent inline styles from being applied from a policy, it must include a default-src or style-src directive.</p>
+
+                <h2>Testing Policy</h2>
+                <p>CSP may be implemented in a report-only mode to make deployment easier. The policy isn't strictly enforced, but any infractions are notified to the URI supplied. A report-only header can also be used to test a future policy adjustment without actually deploying it.</p>
+
+                <p>To set the policy, use the Content-Security-Policy-Report-Only HTTP header, as seen here:</p>
+
+                <img src="../../../PICTURES/IMAGES/WEB SECURITY KNOWLEDGE/testing policy.PNG" alt="code for testing policy">
+
+                <p>Both policies are honored if a Content-Security-Policy-Report-Only header and a Content-Security-Policy header are present in the same response. Content-Security-Policy headers are enforced, but the Content-Security-Policy-Report-Only policy creates reports but is not enforced.</p>
+
+                <div class="button-wrapper">
+                    <button class="custom-btn btn-7"><a href="../../MAINTOPIC/Web Security Knowledge.html" style="text-decoration:none; font-weight:bold;"><span>←&nbsp;Go back</span></a></button>
+                </div>
+                <div>
+                    <br><br>
+                    <hr>
+                    <h3>For more information:</h3>
+                    <ul>
+                        <li><a href="https://web.dev/csp/" target="_blank">Content Security Policy in Web Dev</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank">Http Content Security Policy</a></li>
+                        <li><a href="https://youtu.be/1-sx4AmjGCI" target="_blank">Content Security Policy meta tags</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b19aa01d14d49bd4eabde" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://assets.website-files.com/5e4b19aa01d14d49bd4eabde/js/webflow.a8ec59595.js" type="text/javascript"></script>
+</body>
+</html>

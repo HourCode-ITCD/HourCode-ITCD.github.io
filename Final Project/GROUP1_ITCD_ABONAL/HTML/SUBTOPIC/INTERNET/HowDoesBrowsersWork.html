@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="1800">
+    <title>About Browsers</title>
+    <link rel="icon" href="../../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/Design.css" type="text/css"/>
+    <div class="sidebar-column">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar w-nav">
+            <div class="w-container"><a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Internet</h1></a>
+            <nav role="navigation" class="navigation-menu w-nav-menu">
+            <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+            <a href="BackgroundOfInternet.html" class="nav-link w-nav-link" style="max-width: 940px;">Background of the Internet</a>
+            <a href="WhatIsHTTP.html" class="nav-link w-nav-link" style="max-width: 940px;">What is HTTP?</a>
+            <a href="WhatIsDomainName.html" class="nav-link w-nav-link" style="max-width: 940px;">What is Domain Name?</a>
+            <a href="Hosting.html" class="nav-link w-nav-link" style="max-width: 940px;">What is Hosting?</a>
+            <a href="#" class="nav-link w-nav-link newColor" style="max-width: 940px;">How do browsers work?</a>
+            <div class="divider"></div>
+            <a href="../../../../INDEX.HTML#landing-content" class="nav-link w-nav-link" style="max-width: 940px;">Home</a>
+            </nav><div class="menu-button w-nav-button" style="user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <div class="post-title-section"><h1>How do browsers work?</h1></div>
+            <div class="w-richtext">
+                <h2>Web Browsers</h2>
+                <p>A web browser is a software application that enables a user to access and display web pages or other online content through its graphical user interface.</p>
+                <h2>The browser's main functionality</h2>
+                <p>The main function of a browser is to present the web resource you choose, by requesting it from the server and displaying it in the browser window. The resource is usually an HTML document, but may also be a PDF, image, or some other type of content. The location of the resource is specified by the user using a URI (Uniform Resource Identifier).</p>
+                <p>The way the browser interprets and displays HTML files is specified in the HTML and CSS specifications. These specifications are maintained by the W3C (World Wide Web Consortium) organization, which is the standards organization for the web. For years browsers conformed to only a part of the specifications and developed their own extensions. That caused serious compatibility issues for web authors. Today most of the browsers more or less conform to the specifications.</p>
+                <p>Browser user interfaces have a lot in common with each other. Among the common user interface elements are:</p>
+                <ul type="disc">
+                    <li>Address bar for inserting a URI</li>
+                    <li>Back and forward buttons</li>
+                    <li>Bookmarking options</li>
+                    <li>Refresh and stop buttons for refreshing or stopping the loading of current documents</li>
+                    <li>Home button that takes you to your home page</li>
+                </ul>
+                <p>Strangely enough, the browser's user interface is not specified in any formal specification, it just comes from good practices shaped over years of experience and by browsers imitating each other. The HTML5 specification doesn't define UI elements a browser must have, but lists some common elements. Among those are the address bar, status bar and tool bar. There are, of course, features unique to a specific browser like Firefox's downloads manager.</p>
+
+                <h2>The browser's high level structure</h2>
+                <p>The browser's main components are:</p>
+                <ol type="1">
+                    <li><b>The user interface</b>: this includes the address bar, back/forward button, bookmarking menu, etc. Every part of the browser display except the window where you see the requested page.</li>
+                    <li><b>The browser engine</b>: marshals actions between the UI and the rendering engine.</li>
+                    <li><b>The rendering engine</b>: responsible for displaying requested content. For example if the requested content is HTML, the rendering engine parses HTML and CSS, and displays the parsed content on the screen.</li>
+                    <li><b>Networking</b>: for network calls such as HTTP requests, using different implementations for different platform behind a platform-independent interface.</li>
+                    <li><b>UI backend</b>: used for drawing basic widgets like combo boxes and windows. This backend exposes a generic interface that is not platform specific. Underneath it uses operating system user interface methods.</li>
+                    <li><b>JavaScript interpreter</b>. Used to parse and execute JavaScript code.</li>
+                    <li><b>Data storage</b>. This is a persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.</li>
+                </ol>
+                <img src="../../../PICTURES/IMAGES/layers.png" alt="Browser's high level structure">
+                <p>It is important to note that browsers such as Chrome run multiple instances of the rendering engine: one for each tab. Each tab runs in a separate process.</p>
+                
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-btn btn-7"><a href="../../MAINTOPIC/Internet.html" style="text-decoration:none; font-weight:bold;"><span>←&nbsp;Go back</span></a></button>
+            </div>
+            <br><br>
+            <hr>
+            <h3>For more information:</h3>
+            <ul>
+                <li><a href="https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_browsers_we_will_talk_about" target="_blank">How Browsers Works</a></li>
+                <li><a href="https://www.browserstack.com/guide/browser-rendering-engine" target="_blank">Role of Rendering Engine in Browsers</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work" target="_blank">Populating the Page: How Browsers Work</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b19aa01d14d49bd4eabde" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://assets.website-files.com/5e4b19aa01d14d49bd4eabde/js/webflow.a8ec59595.js" type="text/javascript"></script>
+</body>
+</html>

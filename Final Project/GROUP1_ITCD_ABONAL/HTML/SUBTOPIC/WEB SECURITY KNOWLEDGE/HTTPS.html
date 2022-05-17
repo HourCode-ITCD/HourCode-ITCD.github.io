@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTTPS</title>
+    <meta http-equiv="refresh" content="1800">
+    <link rel="icon" href="../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<style>
+    iframe{
+        float: left;
+        margin:5px 40px 10px 0;
+    }
+</style>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/Design.css" type="text/css"/>
+    <div class="sidebar-column">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar w-nav">
+            <div class="w-container"><a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Web Security Knowledge</h1></a>
+            <nav role="navigation" class="navigation-menu w-nav-menu">
+            <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+            <a href="Content Security Policy.html" class="nav-link w-nav-link" style="max-width: 940px;">Content Security Policy</a>
+            <a href="CORS.html" class="nav-link w-nav-link" style="max-width: 940px;">CORS</a>
+            <a href="#" class="nav-link w-nav-link newColor" style="max-width: 940px;">HTTPS</a>
+            <a href="OWASP Security Risk.html" class="nav-link w-nav-link" style="max-width: 940px;">OWASP Security Risk</a>
+            <div class="divider"></div>
+            <a href="../../../../INDEX.HTML#landing-content" class="nav-link w-nav-link" style="max-width: 940px;">Home</a>
+            </nav><div class="menu-button w-nav-button" style="user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <div class="post-title-section"><h1>Hypertext Transfer Protocol Secure (HTTPS)</h1></div>
+            <div class="w-richtext">
+                <iframe width="auto" height="auto" src="https://www.youtube.com/embed/hExRDVZHhig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>HTTPS (hypertext transfer protocol secure) is a secure method of transmitting data between a web server and a browser. It's a secure version of HTTP, the most used protocol for sending data between a web browser and a website. To strengthen the security of data transport, HTTPS is encrypted. This is especially crucial when users send sensitive information over the internet, such as when login into a bank account, email service, or health insurance provider.</p>
+
+                <p style="clear: left;">HTTPS should be used on any website, especially those that need login credentials. Websites that do not employ HTTPS are indicated differently in current web browsers like Chrome than those that do. A green padlock in the URL bar indicates that the webpage is safe. HTTPS is taken seriously by web browsers; Google Chrome and other browsers mark all non-HTTPS websites as insecure.</p>
+
+                <h2>How does HTTPS work?</h2>
+                <p>To encrypt communications, HTTPS employs an encryption protocol. TLS stands for Transport Layer Security, however it was previously known as Secure Sockets Layer (SSL). An asymmetric public key infrastructure is used to secure communications in this protocol. This sort of security mechanism encrypts communications between two parties using two separate keys:</p>
+                
+                <dd><p>1. Private Key - this key is held by the website owner and kept confidential, as the reader may have guessed. This key is stored on a web server and is used to decode data that has been encrypted using the public key.</p></dd>
+
+                <dd><p>2. Public Key - Anyone who wishes to interact with the server in a secure manner can use this key. Only the private key may decode information encrypted with the public key.</p></dd>
+
+                <h2>Why is HTTPS important?</h2>
+
+                <p>HTTPS protects websites from having their data broadcast in a way that anybody spying on the network can see. When data is transferred via standard HTTP, it is split down into packets of data that can be readily "sniffed" with free software. Communication through an insecure channel, such as public Wi-Fi, is therefore extremely vulnerable to interception. In reality, all HTTP communications are in plain text, making them extremely accessible to anybody with the right tools and open to on-path assaults.</p>
+
+                <ul>
+                    <li>HTTPS protects the integrity of your website </li>
+                    <li>HTTPS protects the privacy and security of your users</li>
+                    <li>HTTPS is the future of the web</li>
+                </ul>
+
+                <h2>How does a website start using HTTPS?</h2>
+
+                <iframe height="170px" src="https://www.youtube.com/embed/R-Yh6THi7aU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <p>Many website hosting companies and other businesses charge a price for TLS/SSL certificates. These certificates are frequently shared across a large number of consumers. There are more costly certificates that may be specifically registered to specific web properties.</p>
+
+                <p>Cloudflare provides HTTPS for free to all websites using a shared certificate (the technical term for this is a multi-domain SSL certificate). Setting up a free account ensures that a website's HTTPS protection is updated on a regular basis. Individual certificates and other features are also available in our premium programs. In any instance, a web property reaps all of the advantages of HTTPS.</p>
+                <div class="button-wrapper">
+                    <button class="custom-btn btn-7"><a href="../../MAINTOPIC/Web Security Knowledge.html" style="text-decoration:none; font-weight:bold;"><span>←&nbsp;Go back</span></a></button>
+                </div>
+                <div>
+                    <br><br>
+                    <hr>
+                    <h3>For more information:</h3>
+                    <ul>
+                        <li><a href="https://www.cloudflare.com/en-gb/learning/ssl/what-is-https/" target="_blank">What is HTTPS?</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=hExRDVZHhig" target="_blank">SSL, TLS, HTTP, HTTPS Explained</a></li>
+                        <li><a href="https://youtu.be/R-Yh6THi7aU" target="_blank">How to get Https for website</a></li>
+                        <li><a href="https://web.dev/why-https-matters/" target="_blank">Why HTTPS matters?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b19aa01d14d49bd4eabde" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://assets.website-files.com/5e4b19aa01d14d49bd4eabde/js/webflow.a8ec59595.js" type="text/javascript"></script>
+</body>
+</html>

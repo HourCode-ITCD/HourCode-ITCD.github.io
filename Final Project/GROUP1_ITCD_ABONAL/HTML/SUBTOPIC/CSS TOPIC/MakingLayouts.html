@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="1800">
+    <title>Making Layouts</title>
+    <link rel="icon" href="../../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/Design.css" type="text/css"/>
+    <div class="sidebar-column">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar w-nav">
+            <div class="w-container"><a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Cascading Style Sheets</h1></a>
+            <nav role="navigation" class="navigation-menu w-nav-menu">
+            <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+            <a href="BackgroundOfCSS.html" class="nav-link w-nav-link" style="max-width: 940px;">Background of CSS</a>
+            <a href="LearnTheBasics.html" class="nav-link w-nav-link" style="max-width: 940px;">Learn the Basics</a>
+            <a href="#" class="nav-link w-nav-link newColor" style="max-width: 940px;">Making Layouts</a>
+            <a href="ResponsiveDesign.html" class="nav-link w-nav-link" style="max-width: 940px;">Responsive Design and Media Queries</a>
+            <div class="divider"></div>
+            <a href="../../../../INDEX.HTML#landing-content" class="nav-link w-nav-link" style="max-width: 940px;">Home</a>
+            </nav><div class="menu-button w-nav-button" style="user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <div class="post-title-section"><h1>Making Layouts</h1></div>
+            <div class="w-richtext">
+                <h2>Learn and Practice Flexbox</h2>
+                
+                <h2>Task 1: Align block elements horizontally in Flexbox</h2>
+                <p>For task number one, we wish to arrange block components horizontally. By default, block elements are layered on top of one another. However, if we place them within a flex container:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex1.jpg" alt="Example1" target="viewImage"/>
+                <h2>Task 2: Center item(s) in the middle of the container in Flexbox</h2>
+                <p>For the next task, we need to center some items in the middle of the container. We may do this by specifying justify-content: center; and align-items: center; in the flex container.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex2.jpg" alt="Example2" target="viewImage"/>
+                <h2>Task 3: Distribute space between items in Flexbox</h2>
+                <p>In order to complete the third task, we must put equal spacing between the elements. It is fairly simple to accomplish this. All we need to do is add justify-content: space-between; to the flex container.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex3.jpg" alt="Example3" target="viewImage"/>
+                <p>justify-content: space-between; gives us equal spaces between items. This is super useful in the navigation, for example, where we need to put equal spaces between the items:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex4.jpg" alt="Example4" target="viewImage"/>
+                <h2>Task 4: Push items to the end of the container in Flexbox</h2>
+                <p>For task 4, we need to push the last item to the end of the container on the horizontal axis. I am going to show 3 options using Flexbox.</p>
+                <p><b>Option 1:</b> using justify-content: space-between;</p>
+                <p>We may use justify-content: space-between; with two items within the container. It will move the first item to the beginning of the container and the final item to the end.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex5.jpg" alt="Example5" target="viewImage"/>
+                <p><b>Option 2:</b> using an empty div with flex-grow</p>
+                <p>For example, if I put a div with flex-grow: 1 between the second item and the last item (third item), the empty div will expand as much as it can and it pushes the last item to the end of the container:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex6.jpg" alt="Example6" target="viewImage"/>
+                <h2>Task 5: Build relative size column layout in Flexbox</h2>
+                <p>By giving the item a flex value of flex: {number}, we can control the size of the item relative to other items. For example with this code:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex7.jpg" alt="Example7" target="viewImage"/>
+                <p>We just finished designing a layout with a total of six columns. Item 1 takes up three columns, whereas the remaining three items each take up one column:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex8.jpg" alt="Example8" target="viewImage"/>
+                <h2>Task 6: Build a responsive layout in Flexbox with and without media queries</h2>
+                <p><b>1. Responsive layout without media query</b></p>
+                <p>If we give a flex container flex-wrap: wrap:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex9.jpg" alt="Example9" target="viewImage"/>
+                <p><b>2. Responsive layout with media query</b></p>
+                <p>We will have more control over the size of the objects using media queries. Assume we want two columns inside a flex-wrap container. We can accomplish this by:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex10.jpg" alt="Example10" target="viewImage"/>
+                <h2>Task 7: Change item order in Flexbox (not common)</h2>
+                <p>We may modify the order of the objects using Flexbox. For example, suppose we have four things in a flex container and wish to place the first item at the end of the row.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex11.jpg" alt="Example11" target="viewImage"/>
+                <h2>Task 8: Change the position of an item inside a flex container</h2>
+                <p>An item inside the flex can change position by itself by using align-self.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/flex12.jpg" alt="Example12" target="viewImage"/>
+
+
+                <h2>Game for learning CSS Grid</h2>
+                <p>CSS learning may be a challenging process at times. One of the nicest parts of learning to code is that those who are skilled at it also have the ability to create games that educate others how to code.</p>
+                <p>Here are some games which help you to master CSS.</p>
+                <h3>1. Flexbox Froggy</h3>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/game1.jpg" alt="Example1" target="viewImage"/>
+                <p>This game is about Flexbox and it includes 24 distinct levels of flex characteristics such as align-items, justify-content, align-content, flex-direction, align-self, flex-wrap, flex-flow, and order.</p>
+                <p>Link to Flexbox Froggy: <a href="http://flexboxfroggy.com">http://flexboxfroggy.com</a></p>
+                <h3>2. CodinGame</h3>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/game2.jpg" alt="Example2" target="viewImage"/>
+                <p>CodinGame provides entertaining free games to assist in the learning of more than 25 programming languages, including JavaScript, Ruby, and PHP. One of the coolest things about CodinGame is that you may play with your friends or coworkers as well as compete in worldwide coding contests.</p>
+                <p>Link to CodinGame: <a href="https://www.codingame.com/start">https://www.codingame.com/start</a></p>
+                <h3>3. CSS Battle</h3>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/game3.jpg" alt="Example3" target="viewImage"/>
+                <p>CSS Battle is more of an online challenge than a CSS practice game, with the goal of writing HTML and CSS code to mimic the specified target picture with the least amount of code possible. New tasks are added to this game on a regular basis. It offers a worldwide ranking system and the option to replay each challenge in order to better your own performance.</p>
+                <p>Link to CSS Battle: <a href="https://cssbattle.dev/">https://cssbattle.dev/</a></p>
+                <h3>4. Flexbox Defense</h3>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/game4.jpg" alt="Example4" target="viewImage"/>
+                <p>Flexbox defense is inspired by conventional tower defense games, however we use CSS to arrange our components. To shift the single towers into effective places, we employ the justify-content property on the main container.</p>
+                <p>Link to Flexbox Defense: <a href="http://www.flexboxdefense.com/">http://www.flexboxdefense.com/</a></p>
+                <h3>5. CodeCombat</h3>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/game5.jpg" alt="Example5" target="viewImage"/>
+                <p>Python, JavaScript, CoffeeScript, and the Lua game programming language are all worth learning. On the novice Dungeon level, you'll guide your Hero through the game by using simple commands from the lesson that appears alongside the game.</p>
+                <p>Link to CodeCombat: <a href="https://codecombat.com/">https://codecombat.com/</a></p>
+
+
+                <h2>All about Floats</h2>
+                <p><b>Float</b> is a CSS positioning attribute. Print design can help us comprehend its purpose and origin. Images in a print layout can be placed into the page so that text wraps around them as needed. This is widely and aptly referred to as "text wrap." Here's an example:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float1.jpg" alt="Example1" target="viewImage"/>
+                <p>The boxes that carry the text in page layout applications can be set to honor or ignore the text wrap. Ignoring the text wrap allows the words to flow over the image as if it didn't exist. This is the distinction between that picture being part of the page's flow and not being part of it (or not). The process of creating a website is pretty similar.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float2.jpg" alt="Example2" target="viewImage"/>
+                <p>Page components with the CSS float attribute applied to them in web design behave similarly to pictures in print layouts, where the text flows around them. Floated items stay part of the web page's flow. This is not the same as page elements that employ absolute positioning. Page components that are absolutely positioned are detached from the flow of the webpage, such as when the text box in the print layout is directed to ignore the page wrap. Page elements that are absolutely positioned have no effect on the position of other components, and other elements have no effect on them, whether they touch or not.</p>
+                <h2>What are floats used for?</h2>
+                <p>Aside from the simple example of wrapping text around images, floats can be used to create entire web layouts.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float3.jpg" alt="Example3" target="viewImage"/>
+                <p>Floats are also useful for designing in smaller situations. Consider this small section of a web page. If we use float for our small avatar picture, the text in the box will reflow to compensate as the image changes size:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float4.jpg" alt="Example4" target="viewImage"/>
+                <p>This arrangement may also be achieved with relative positioning on the container and absolute positioning on the avatar. In this case, the text would be untouched by the avatar and would not be able to reflow when the size was changed.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float5.jpg" alt="Example5" target="viewImage"/>
+                <h2>Clearing the Float</h2>
+                <p>Float's sister property is clear. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float. Again an illustration probably does more good than words do.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float6.jpg" alt="Example6" target="viewImage"/>
+                <p>The sidebar in the preceding example is floating to the right and is shorter than the main text area. The footer must then jump up into the open area as directed by the float. To resolve this issue, the footer may be cleared such that it remains beneath both floating columns.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float7.jpg" alt="Example7" target="viewImage"/>
+                <p>Clear also has four permissible values. Both are the most often utilized methods for clearing floats coming from either direction. Left and Right may only be used to clear the float in one direction. None is the default, which is usually unnecessary unless a clear value is being removed from a cascade. Inherit is the fifth option, however it is oddly not supported by Internet Explorer. While clearing simply the left or right float is less prevalent in the wild, it has its purposes.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float8.jpg" alt="Example8" target="viewImage"/>
+                <h2>Techniques for Clearing Floats</h2>
+                <p>If you always know what the subsequent element will be, you can apply the clear: both; value to that element and go on with your business. This is good since it does not require any fancy hacks or additional pieces, making it entirely semantic. Of course, that isn't always the case, and we need more float-clearing techniques in our repertoire.</p>
+                <p><b>The Overflow Method</b> relies on setting the overflow CSS property on a parent element. If this property is set to auto or hidden on the parent element, the parent will expand to contain the floats, effectively clearing it for succeeding elements. This method can be beautifully semantic as it may not require additional elements. However if you find yourself adding a new div just to apply this, it is equally as non-semantic as the empty div method and less adaptable. Also bear in mind that the overflow property isn’t specifically for clearing floats. Be careful not to hide content or trigger unwanted scrollbars.</p>  
+                <p><b>The Easy Clearing Method</b> uses a clever CSS pseudo selector (:after) to clear floats. Rather than setting the overflow on the parent, you apply an additional class like “clearfix” to it. Then apply this CSS:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float9.jpg" alt="Example9" target="viewImage"/>
+                <p>This will apply a small bit of content, hidden from view, after the parent element which clears the float. </p>
+                <p>Different scenarios call for different float clearing methods. Take for example a grid of blocks, each of different types.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float10.jpg" alt="Example10" target="viewImage"/>
+                <p>We want to start a new row whenever we wish, in this example when the color changes, to better visually link the related blocks. If each of the color groups had a parent element, we could utilize either the overflow or simple cleaning technique. Alternatively, we may utilize the empty div approach in between each group. Three wrapping divs that didn't exist before, or three after divs that didn't exist before. I'll leave it up to you to determine which is best.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/float11.jpg" alt="Example11" target="viewImage"/>
+
+                <h2>Positioning Types: How Do They Differ?</h2>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/position1.jpg" alt="Example1" target="viewImage"/>
+                <h2>Static</h2>
+                <p>This is the <b>default</b> for all page elements. Distinct elements do not have different positioning default values; they all start off static. The term "static" doesn't mean anything; it just signifies that the element will appear on the page as it usually would. The only time you'd set an element to position: static; is to aggressively remove some positioning that has been applied to an element outside of your control. This is uncommon since placement does not cascade.</p>
+                <h2>Relative</h2>
+                <p>This is most likely the most perplexing and misunderstood sort of posture. It truly means "related to itself." If you set position: relative; on an element but no other positioning attributes (top, left, bottom, or right), it will behave exactly as if you left it as position: static; However, if you do give it some other positioning attribute, say, top: 10px;, it will shift its position 10 pixels down from where it would normally be. As you may guess, the ability to move an element depending on its usual location is rather helpful.</p>
+                <p>When you set position, two things happen: relative; on an element that you should be aware of. One advantage is that it allows you to utilize z-index on that element, which isn't possible with statically positioned elements. Even if no z-index value is specified, this element will now appear on top of any other statically positioned element. You can't resist it by increasing the z-index of a statically positioned element.</p>
+                <h2>Absolute</h2>
+                <p>This is an extremely powerful sort of placement that allows you to virtually place any page element anywhere you want it. To set the location, you utilize the positioning attributes top, left, bottom, and right. Remember that with relative (or absolute) placement, these values will be relative to the next parent element. If no such parent exists, it will default all the way up to the html> element itself, implying that it will be inserted relative to the page itself.</p>
+                <p>The disadvantage of absolute placement (and the most crucial thing to remember) is that these items are disconnected from the flow of elements on the page. An element with this style of placement is unaffected by other elements and has no effect on them. This is something to think about every time you employ absolute positioning. Its overuse or wrong usage might restrict your site's versatility.</p>
+                <h2>Fixed</h2>
+                <p>A fixed position element is one that is positioned in relation to the viewport, or the browser window itself. Because the viewport does not change when the window is scrolled, a fixed positioned element will remain in place when the page is scrolled.</p>
+                <p>This may be used for things like a navigation bar that has to be displayed at all times regardless of where the page is scrolled. The issue with fixed placement is that it might lead to circumstances in which the fixed element overlays content, rendering it inaccessible.</p>
+                <h2>Sticky</h2>
+                <p>Sticky positioning is truly one-of-a-kind! A sticky element will sit like a static element, but when you scroll past it, if its parent element has room (usually: additional height), the sticky element will act as if it's fixed until that parent element runs out of room. In terms like that, it seems strange, but it's simple to see what's going on in a demo.</p>
+
+
+
+                <h2>CSS Box Model</h2>
+                <p>The <b>CSS box model</b> is a container that includes several attributes such as borders, margins, padding, and the content itself. It is used to develop web page design and layout. It may be used as a toolkit for modifying the arrangement of various parts. According to the CSS box model, the web browser presents each element as a rectangular box. In CSS, the Box-Model has several characteristics. Some of them are as follows:</p>
+                <p><b>content:</b> This property is used to displays the text, images, etc, that can be sized using the width & height property.</p>
+                <p><b>padding:</b> This property is used to create space around the element, inside any defined border.</p>
+                <p><b>border:</b> This property is used to cover the content & any padding, & also allows to set the style, color, and width of the border.</p>
+                <p><b>margin:</b> This property is used to create space around the element ie., around the border area.</p>
+                <p>The following figure illustrates the <b>Box model</b> in CSS.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/box1.jpg" alt="Example1" target="viewImage"/>
+                <p><b>Content Area:</b> This area consists of content like text, images, or other media content. It is bounded by the content edge and its dimensions are given by content-box width and height.</p>
+                <p><b>Padding Area:</b> It includes the element's padding. This area is actually the space around the content area and within the border-box. Its dimensions are given by the width of the padding-box and the height of the padding-box.</p>
+                <p><b>Border Area:</b> It is the area between the box's padding and margin. Its dimensions are given by the width and height of the border.</p>
+                <p><b>Margin Area:</b> This area consists of space between border and margin. The dimensions of the Margin area are the margin-box width and the margin-box height. It is useful to separate the element from its neighbors.</p>
+                <p>To specify the width and height properties of an element (and so properly render the content in the browser), we must first understand how the CSS Box model works.</p>
+                <p>We just set the width and height of the content area while setting the width and height attributes of an element using CSS. To compute the complete size of an element, we must include padding, borders, and margins. Consider the case below.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/box2.jpg" alt="Example2" target="viewImage"/>
+                <p>The total width for the element can be calculated as:</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/box3.jpg" alt="Example3" target="viewImage"/>
+                <p>The element can have a total width of 94px.</p>
+                <p>Total width = 80px (width) + 10px (left padding + right padding) + 4px (left border + right border) + 0px (left margin + right margin) = 94px.</p>
+                <p>We will understand the Box model concept through the examples.</p>
+                <p><b>Example:</b> This example illustrates the Box Model by implementing the various properties.</p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/box4.jpg" alt="Example4" target="viewImage"/>
+                <p><b>output:</b></p>
+                <img src="../../../PICTURES/IMAGES/CSS TOPIC/box5.jpg" alt="Example5" target="viewImage"/>
+                <p><b>Supported Browser:</b></p>
+                <ul type="none">
+                    <li>Google Chrome</li>
+                    <li>Internet Explorer</li>
+                    <li>Microsoft Edge</li>
+                    <li>Firefox</li>
+                    <li>Opera</li>
+                    <li>Safari</li>
+                </ul>
+
+                <div class="button-wrapper">
+                    <button class="custom-btn btn-7"><a href="../../MAINTOPIC/CSS TOPIC.html" style="text-decoration:none; font-weight:bold;"><span>←&nbsp;Go back</span></a></button>
+                </div>
+
+                <br><br><hr>
+                <div>
+                    <h3>For more information:</h3>
+                    <ul>
+                        <li><a href="https://css-tricks.com/all-about-floats/">All about Floats</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/css-box-model/" target="_blank">CSS Box Model</a></li>
+                        <li><a href="https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" target="_blank">Difference of Absolute and Relative Fixed Positioning</a></li>
+                        <li><a href="https://medium.com/geekculture/learn-css-by-playing-games-cf70a79a38" target="_blank">Learn CSS by playing games</a></li>
+                        <li><a href="https://www.freecodecamp.org/news/learn-flexbox-common-use-cases/" target="_blank">Learn Flexbox</a></li>  
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b19aa01d14d49bd4eabde" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://assets.website-files.com/5e4b19aa01d14d49bd4eabde/js/webflow.a8ec59595.js" type="text/javascript"></script>
+</body>
+</html>

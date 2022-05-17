@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Learn Fetch API/Ajax(XHR)</title>
+    <meta http-equiv="refresh" content="1800">
+    <link rel="icon" href="../../../PICTURES/FAVICON/Front Dev Icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Secular+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="../../../DESIGN/Design.css" type="text/css"/>
+    <div class="sidebar-column">
+        <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navigation-bar w-nav">
+            <div class="w-container"><a href="#" class="logo-link w-nav-brand"><h1 class="logo-text">Javascript</h1></a>
+            <nav role="navigation" class="navigation-menu w-nav-menu">
+            <div class="divider w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+            <a href="SyntaxAndBasicConstruction.html" class="nav-link w-nav-link" style="max-width: 940px;">Syntax and Basic Construct</a>
+            <a href="LearnDOMManipulation.html" class="nav-link w-nav-link" style="max-width: 940px;">Learn DOM Manipulation</a>
+            <a href="#" class="nav-link w-nav-link newColor" style="max-width: 940px;">Learn Fetch API/Ajax</a>
+            <a href="ModularJavaScript.html" class="nav-link w-nav-link" style="max-width: 940px;">Es6+ and Modular Javascript</a>
+            <a href="JavaScriptConcepts.html" class="nav-link w-nav-link" style="max-width: 940px;">Learn and understand concepts</a>
+            <div class="divider"></div>
+            <a href="../../../../INDEX.HTML#landing-content" class="nav-link w-nav-link" style="max-width: 940px;">Home</a>
+            </nav><div class="menu-button w-nav-button" style="user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+            </div>
+            <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-list">
+            <div class="post-title-section"><h1>Learn Fetch API/Ajax(XHR)</h1></div>
+            <div class="w-richtext">
+                <h2>Fetch API</h2>
+                <p>The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible feature set.</p>
+
+                <h2>Concept and Usage</h2>
+                <p>Fetch provides a generic definition of <tt>Request</tt>  and <tt>Response</tt> objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it's for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically (that is, the use of computer program or personal programming instructions).</p>
+                <p>It also defines related concepts such as CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere.</p>
+                <p>For making a request and fetching a resource, use the <tt>fetch()</tt>  method. It is implemented in multiple interfaces, specifically <tt>Window</tt> and <tt>WorkerGlobalScope</tt>. This makes it available in pretty much any context you might want to fetch resources in.</p>
+                <p>The <tt>fetch()</tt> method takes one mandatory argument, the path to the resource you want to fetch. It returns a <tt>Promise</tt> that resolves to the <tt>Response</tt> to that request — as soon as the server responds with headers — even if the server response is an HTTP error status. You can also optionally pass in an <tt>init</tt> options object as the second argument</p>
+                <p>Once a <tt>Response</tt> is retrieved, there are a number of methods available to define what the body content is and how it should be handled.</p>
+                <p>You can create a request and response directly using the <tt>Request()</tt> and <tt>Response()</tt> constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, <tt>FetchEvent.respondWith()</tt> from service workers).</p>
+
+                <h2>Differences from jQuery</h2>
+                <p>The <tt>fetch</tt> specification differs from <tt>jQuery.ajax()</tt> in three main ways:</p>
+                <ul>
+                    <li>The Promise returned from <tt>fetch()</tt> won't reject on HTTP error status even if the response is an HTTP <tt>404</tt> or <tt>500</tt>. Instead, it will resolve normally (with ok status set to false), and it will only reject on network failure or if anything prevented the request from completing.</li>
+                    <li><tt>fetch()</tt> won't send cross-origin cookies unless you set the credentials init option (to include).</li>
+                    <li>In April 2018, the spec changed the default credentials policy to 'same-origin'. The following browsers shipped an outdated native fetch, and were updated in these versions: Firefox 61.0b13, Safari 12, Chrome 68.</li>
+                    <li>If you are targeting older versions of these browsers, be sure to include credentials: 'same-origin' init option on all API requests that may be affected by cookies/user login state.</li>
+                </ul>
+
+                <h2>Aborting a fetch</h2>
+                <p>Browsers have started to add experimental support for the AbortController and AbortSignal interfaces (aka The Abort API), which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.</p>
+
+                <h2>Browser compatibility</h2>
+                <img src="../../../PICTURES/IMAGES/JAVASCRIPT/Java25.JPG" alt="Table">
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-btn btn-7"><a href="../../MAINTOPIC/Javascript.html" style="text-decoration:none; font-weight:bold;"><span>←&nbsp;Go back</span></a></button>
+            </div>
+            <div>
+                <br><br><hr>
+                <h3>For more information:</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API MDN Docs</a> </li>
+                    <li><a href="https://www.youtube.com/watch?v=-ZI0ea5O2oA">JavaScript Fetch API</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e4b19aa01d14d49bd4eabde" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://assets.website-files.com/5e4b19aa01d14d49bd4eabde/js/webflow.a8ec59595.js" type="text/javascript"></script>
+</body>
+</html>
